@@ -1,8 +1,10 @@
 'use strict';
 
+const AUTH0_CONFIG = require('./auth0-variables');
+
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'ember-oauth',
+    modulePrefix: 'ember-auth0',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -20,7 +22,13 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    auth0: {
+      callbackUrl: AUTH0_CONFIG.callbackUrl,
+      clientId: AUTH0_CONFIG.clientId,
+      domain: AUTH0_CONFIG.domain,
+    },
   };
 
   if (environment === 'development') {

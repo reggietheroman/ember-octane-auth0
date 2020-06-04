@@ -12,6 +12,7 @@
 /.env*
 /.pnp*
 /.sass-cache
+/config/auth0-variables.js
 /connect.lock
 /coverage/
 /libpeerconnection.log
